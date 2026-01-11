@@ -1,0 +1,189 @@
+/* =========================
+   BRAND COLORS
+========================= */
+:root {
+    --green: #0b7d3e;
+    --dark-green: #075c2e;
+    --white: #ffffff;
+}
+
+/* =========================
+   GENERAL STYLES
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: #333;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background-color: var(--white);
+}
+
+.navbar .nav-link {
+    color: var(--green);
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--dark-green);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+    background-color: var(--green);
+    border: none;
+    padding: 10px 25px;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--green);
+    color: var(--green);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* =========================
+   PRODUCT & PORTFOLIO HOVER
+========================= */
+.product-item,
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-item img,
+.portfolio-item img {
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img,
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(11, 125, 62, 0.85);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .overlay,
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+
+#backToTop:hover {
+    background-color: var(--dark-green);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #0b7d3e; /* Brand Green */
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+
+.social-icons a {
+    color: var(--white);
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #c7f5d9;
+}
+/* Home Image Section */
+.home-image-section {
+    background-color: #ffffff;
+}
+
+.section-title {
+    color: #0b7d3e;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #555;
+    max-width: 650px;
+    margin: auto;
+}
+
+.image-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.image-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.image-card:hover {
+    transform: translateY(-6px);
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 125, 62, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay h5 {
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}
